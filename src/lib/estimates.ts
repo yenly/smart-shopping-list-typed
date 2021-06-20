@@ -8,7 +8,7 @@
  *
  * @return {Number} Estimated number of days until the next purchase
  */
-const calculateEstimate = (lastEstimate, latestInterval, numberOfPurchases) => {
+const calculateEstimate = (lastEstimate: number, latestInterval: number, numberOfPurchases: number): number => {
     if (numberOfPurchases >= 2) {
         if (isNaN(lastEstimate)) {
             lastEstimate = 14;
