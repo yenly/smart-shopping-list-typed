@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { fb } from '../lib/firebase';
 
-export default function BoopFirebase() {
+export const BoopFirebase: React.FC = () => {
   const db = fb.firestore();
   const sendBoop = () => {
     db.collection('boops')
@@ -22,4 +22,4 @@ export default function BoopFirebase() {
       </Button>
     </>
   );
-}
+};
