@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p>This button is not wired up yet.</p>
+        <p>Click button to send boops to Firestore</p>
         <BoopFirebase />
         {error && <strong>Error: {JSON.stringify(error)}</strong>}
         {loading && <span>Messages: Loading...</span>}
