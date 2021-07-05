@@ -23,6 +23,6 @@ const firebaseConfig = {
   appId: REACT_APP_FIREBASE_APP_ID,
 };
 
-const fb = firebase.initializeApp(firebaseConfig);
+const fb: firebase.app.App = firebase.initializeApp(firebaseConfig);
 
 export { fb };

@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.less';
-import { Button } from 'antd';
+import BoopFirebase from './components/BoopFirebase';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>This button is not wired up yet.</p>
-        <Button type="primary"> Boop! booP! BOOP!</Button>
+        <BoopFirebase />
       </header>
     </div>
   );
