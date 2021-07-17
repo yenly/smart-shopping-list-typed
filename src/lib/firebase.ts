@@ -1,5 +1,3 @@
-// NOTE: import only the Firebase modules that you need in your app... except
-// for the second line, which makes both the linter and react-firebase happy
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -23,6 +21,7 @@ const firebaseConfig = {
   appId: REACT_APP_FIREBASE_APP_ID,
 };
 
-const fb: firebase.app.App = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-export { fb };
+export { db };

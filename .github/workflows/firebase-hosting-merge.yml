@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SMART_SHOPPING_LIST_TYPED }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SMART_SL_TYPED_7E878 }}'
           channelId: live
-          projectId: smart-shopping-list-typed
+          projectId: smart-sl-typed-7e878

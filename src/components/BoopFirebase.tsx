@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button } from 'antd';
-import { fb } from '../lib/firebase';
+import { db } from '../lib/firebase';
 
 export const BoopFirebase: React.FC = () => {
-  const db = fb.firestore();
   const sendBoop = () => {
     db.collection('boops')
       .add({
