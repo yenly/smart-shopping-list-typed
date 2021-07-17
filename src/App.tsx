@@ -2,10 +2,9 @@ import React from 'react';
 import './App.less';
 import { BoopFirebase } from './components/BoopFirebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { fb } from './lib/firebase';
+import { db } from './lib/firebase';
 
 const App: React.FC = () => {
-  const db = fb.firestore();
   const [value, loading, error] = useCollection(db.collection('boops'), {
     snapshotListenOptions: { includeMetadataChanges: true },
   });

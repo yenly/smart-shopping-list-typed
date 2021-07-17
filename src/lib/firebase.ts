@@ -1,5 +1,3 @@
-// NOTE: import only the Firebase modules that you need in your app... except
-// for the second line, which makes both the linter and react-firebase happy
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -10,6 +8,7 @@ const {
   REACT_APP_FIREBASE_STORAGE_BUCKET,
   REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   REACT_APP_FIREBASE_APP_ID,
+  REACT_APP_FIREBASE_MEASUREMENT_ID,
 } = process.env;
 
 // Initalize Firebase.
@@ -21,8 +20,10 @@ const firebaseConfig = {
   storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: REACT_APP_FIREBASE_APP_ID,
+  measurementId: REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const fb = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-export { fb };
+export { db };
